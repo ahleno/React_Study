@@ -1,25 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import {Fragment} from 'react'
+
+
+function formatName(user) {
+  return user.firstName + user.lastName
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const name = {
+    firstName: "Haneol",
+    lastName: "Kim"
+  }
+
+  const isMember = true;
+
+  return(
+    <Fragment>
+      <h1>Hello, {formatName(name)}</h1>
+      <h1>Hello, {formatName(name)}</h1>
+    </Fragment>
+  )
 }
 
 export default App;
