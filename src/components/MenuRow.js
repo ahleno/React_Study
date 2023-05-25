@@ -1,11 +1,15 @@
 import MenuCard from "./MenuCard";
 
-function MenuRow({ menuInfo }) {
+function MenuRow({ menuInfo, setClickedMenu }) {
   return (
     <div className="menu-container-row">
-      {menuInfo.map((m) => {
+      {menuInfo.map((m, index) => {
         return (
-          <MenuCard menuInfoEach={m}></MenuCard>
+          <MenuCard 
+            menuInfoEach={m} 
+            setClickedMenu={setClickedMenu}
+            cardOrder={index}>
+          </MenuCard>
         )
       })}
     </div>
