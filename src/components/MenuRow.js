@@ -4,7 +4,9 @@ function MenuRow({ menuInfo }) {
   return (
     <div className="menu-container-row">
       {menuInfo.map((m) => {
-        <MenuCard menuInfoEach={m}></MenuCard>
+        return (
+          <MenuCard menuInfoEach={m}></MenuCard>
+        )
       })}
     </div>
   );

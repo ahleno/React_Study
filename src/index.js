@@ -5,11 +5,15 @@ import App from './App';
 import ComponentStudy from './ComponentStudy';
 import Hansot from './Hansot';
 import reportWebVitals from './reportWebVitals';
+import Study from './study/Study';
+import {BrowserRouter} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Hansot />
+    <BrowserRouter>
+      <Hansot/>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
